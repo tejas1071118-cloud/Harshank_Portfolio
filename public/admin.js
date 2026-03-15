@@ -1,3 +1,27 @@
+// ===================== AUTH CHECK =====================
+async function checkAuth() {
+    try {
+        const API_URL = typeof CONFIG !== 'undefined' ? CONFIG.API_BASE_URL : '';
+        const res = await fetch(API_URL + '/api/auth/status', { credentials: 'include' });
+        
+        // If server returns error or status false, kick to login
+        if (!res.ok) {
+            window.location.href = 'login.html';
+            return;
+        }
+        
+        const data = await res.json();
+        if (!data.isAuthenticated) {
+            window.location.href = 'login.html';
+            return;
+        }
+    } catch (err) {
+        console.error('Auth check error:', err);
+        window.location.href = 'login.html';
+    }
+}
+checkAuth(); // Run immediately upon load
+
 // ===================== DOM READY =====================
 document.addEventListener('DOMContentLoaded', () => {
     initDropZone();
