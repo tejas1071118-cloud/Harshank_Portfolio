@@ -1,0 +1,10 @@
+node_modules/
+.env
+uploads/
+*.log
+media-data.json
+install.bat
+install.log
+C:\Users\TEJAS SAWANT\.gemini\antigravity\brain\7b4ed318-ce8a-415d-8ebb-d958ab917052\task.md
+C:\Users\TEJAS SAWANT\.gemini\antigravity\brain\7b4ed318-ce8a-415d-8ebb-d958ab917052\walkthrough.md
+C:\Users\TEJAS SAWANT\.gemini\antigravity\brain\7b4ed318-ce8a-415d-8ebb-d958ab917052\implementation_plan.md

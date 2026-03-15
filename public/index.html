@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Harshank Lokhande — Video Editor, Photographer, Painter & Content Creator. Professional portfolio showcasing cinematic edits, brand reels, food videography, and fine art.">
+    <title>Harshank Lokhande | Video Editor & Creative Artist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script src="config.js"></script>
+</head>
+
+<body>
+
+    <!-- ===================== CUSTOM CURSOR ===================== -->
+    <div id="custom-cursor"></div>
+    <div id="custom-cursor-glow"></div>
+
+    <!-- ===================== FILM GRAIN OVERLAY ===================== -->
+    <div class="grain-overlay"></div>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav id="navbar">
+        <a href="#" class="nav-logo">HL<span class="dot">.</span></a>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#food-reels">Food Reels</a></li>
+            <li><a href="#photography">Photography</a></li>
+            <li><a href="#youtube">YouTube</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="nav-cta">Let's Create Together</a>
+        <button id="mobile-menu-btn" aria-label="Toggle Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- ===================== HERO SECTION ===================== -->
+    <section id="hero">
+        <div class="hero-bg-glow"></div>
+        <div class="hero-content">
+            <div class="hero-image-wrapper reveal">
+                <div class="hero-image-frame">
+                    <img src="/uploads/hero-placeholder.jpg" alt="Harshank editing at his workstation" id="hero-img"
+                        onerror="this.style.display='none'; this.parentElement.classList.add('no-img');">
+                </div>
+            </div>
+            <div class="hero-text reveal">
+                <span class="hero-tag">LET'S CREATE TOGETHER</span>
+                <h1 class="hero-name">HARSHANK<br>LOKHANDE</h1>
+                <p class="hero-title">VIDEO EDITOR</p>
+                <div class="hero-roles">
+                    <span>Photographer</span>
+                    <span class="role-divider">•</span>
+                    <span>Painter</span>
+                    <span class="role-divider">•</span>
+                    <span>YouTuber</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>scroll</span>
+        </div>
+    </section>
+
+    <!-- ===================== INFINITE MARQUEE ===================== -->
+    <div class="marquee-divider">
+        <div class="marquee-track">
+            <span>VIDEO EDITOR • PHOTOGRAPHER • PAINTER • CONTENT CREATOR • </span>
+            <span>VIDEO EDITOR • PHOTOGRAPHER • PAINTER • CONTENT CREATOR • </span>
+            <span>VIDEO EDITOR • PHOTOGRAPHER • PAINTER • CONTENT CREATOR • </span>
+            <span>VIDEO EDITOR • PHOTOGRAPHER • PAINTER • CONTENT CREATOR • </span>
+        </div>
+    </div>
+
+    <!-- ===================== ABOUT SECTION ===================== -->
+    <section id="about">
+        <div class="about-container">
+            <div class="about-card reveal">
+                <h2 class="section-heading">ABOUT ME</h2>
+                <p>Hi, I'm Harshank Lokhande — a freelancer and a student at <strong>Viva Institute of Applied
+                        Art</strong>.</p>
+                <p>Art has been a part of my life since childhood, which is why I'm pursuing a <strong>Bachelor's degree
+                        in Fine Arts</strong>. Alongside my studies, I work as a freelancer specializing in <span
+                        class="highlight-yellow">Photography</span>, <span class="highlight-cyan">Videography</span>,
+                    and <span class="highlight-red">Video Editing</span>.</p>
+                <p>This website showcases my video editing work — the space where my creative energy finds its truest
+                    expression.</p>
+                <p>I like to think of myself as a born artist — not someone naturally gifted, but someone who's always
+                    exploring, making mistakes, learning, and growing. I don't shy away from failure. I embrace it,
+                    learn from it, and move forward with more clarity and determination.</p>
+                <p>While I may not have years of experience just yet, I bring with me enthusiasm, curiosity, and a deep
+                    commitment to producing impactful, <span class="highlight-red">original content</span>. When you
+                    work with me, you're not just hiring a freelancer — you're collaborating with someone who's
+                    genuinely passionate about solving <span class="highlight-cyan">creative problems</span> and
+                    bringing ideas to life.</p>
+            </div>
+            <div class="about-skills-visual reveal">
+                <div class="skill-bubble" style="--delay: 0.1s;">Fine Arts</div>
+                <div class="skill-bubble" style="--delay: 0.3s;">Photography</div>
+                <div class="skill-bubble" style="--delay: 0.5s;">Videography</div>
+                <div class="skill-bubble" style="--delay: 0.7s;">Content Creation</div>
+                <div class="skill-bubble" style="--delay: 0.9s;">Video Editing</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOD REELS SECTION ===================== -->
+    <section id="food-reels" class="portfolio-section">
+        <div class="bg-title-overlay">REELS</div>
+
+        <div class="canva-frame-container reveal">
+            <h2 class="canva-heading">FOOD REELS</h2>
+
+            <div id="food-reels-grid" class="portfolio-grid grid-bento">
+                <div class="portfolio-empty">
+                    <div class="empty-icon">🍔</div>
+                    <p>Mouthwatering reels coming soon!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Descriptive Text Card (Canva Style) -->
+        <div class="food-promo-card reveal">
+            <p class="promo-title">Want your food to look as good as it tastes?</p>
+            <p class="promo-text">I create scroll-stopping food reels for restaurants and food brands that boost
+                engagement and drive orders. Let’s turn your kitchen moments into marketing magic.</p>
+        </div>
+    </section>
+
+    <!-- ===================== PHOTOGRAPHY SECTION ===================== -->
+    <section id="photography" class="portfolio-section">
+        <div class="section-divider"></div>
+        <div class="bg-title-overlay">SHUTTER</div>
+        <h2 class="section-heading center reveal">PHOTOGRAPHY</h2>
+        <p class="section-sub center reveal">Capturing moments, stories, and fine-art perspectives.</p>
+        <div id="photography-grid" class="portfolio-grid grid-masonry">
+            <div class="portfolio-empty">
+                <div class="empty-icon">📷</div>
+                <p>Stunning captures coming soon!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== YOUTUBE SECTION ===================== -->
+    <section id="youtube" class="portfolio-section">
+        <div class="bg-title-overlay">YOUTUBE</div>
+
+        <div class="youtube-split-layout reveal">
+            <!-- Left Side: Information & Branding -->
+            <div class="youtube-info-side">
+                <div class="youtube-header-row">
+                    <div class="yt-play-btn">
+                        <div class="yt-play-triangle"></div>
+                    </div>
+                    <h2 class="canva-heading">Youtube Channel</h2>
+                </div>
+
+                <div class="youtube-glass-card">
+                    <p>For the past 3+ years, I’ve been consistently creating, editing, and publishing vlogs purely out
+                        of passion.</p>
+                    <p>While I never chased viral growth, this channel helped me develop a sharp sense of visual
+                        **storytelling**, **pacing**, and **long-form video editing**.</p>
+                    <p>I handle everything — from editing the videos and color grading to crafting thumbnails and
+                        structuring engaging narratives.</p>
+                    <p>So if you’re a YouTuber looking for a reliable one-stop solution for your content — be it vlogs,
+                        travel, lifestyle, or storytelling — you can count on me to bring both **consistency** and
+                        **creativity** to your channel.</p>
+                </div>
+            </div>
+
+            <!-- Right Side: Video Grid -->
+            <div class="youtube-grid-wrapper">
+                <div id="youtube-grid" class="portfolio-grid grid-youtube">
+                    <div class="portfolio-empty">
+                        <div class="empty-icon">▶</div>
+                        <p>Videos and content coming soon!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== OTHER WORK SECTION ===================== -->
+    <section id="other-work" class="portfolio-section">
+        <div class="section-divider"></div>
+        <h2 class="section-heading center reveal">OTHER CREATIVE PROJECTS</h2>
+        <p class="section-sub center reveal">Brand edits, paintings, and experimental visuals.</p>
+        <div id="other-work-grid" class="portfolio-grid">
+            <div class="portfolio-empty">
+                <div class="empty-icon">🎨</div>
+                <p>Creative experiments coming soon!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FEATURED PROJECTS ===================== -->
+    <section id="featured-projects">
+        <div class="featured-container">
+            <div class="featured-text reveal">
+                <span class="featured-label">FEATURED PROJECT</span>
+                <h2 class="section-heading">VIVA INSTITUTE</h2>
+                <p>I handled the entire production independently — from concept, direction, and shooting to editing. A
+                    promotional video that captures the spirit of creativity at my college.</p>
+                <a href="#" class="btn-watch" id="watch-project-btn">
+                    <span class="btn-icon">▶</span>
+                    WATCH FULL PROJECT
+                </a>
+            </div>
+            <div class="featured-visual reveal">
+                <div class="video-frame">
+                    <div class="video-placeholder" id="featured-video-placeholder">
+                        <span class="play-icon">▶</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CONTACT SECTION ===================== -->
+    <section id="contact">
+        <div class="contact-container reveal">
+            <div class="contact-split">
+                <div class="contact-info">
+                    <h2 class="section-heading">LET'S WORK TOGETHER</h2>
+                    <p class="contact-sub">Have a project in mind? Let's turn your vision into reality.</p>
+                    <div class="contact-links">
+                        <a href="mailto:harshanksart@gmail.com" class="contact-card" id="contact-email">
+                            <div class="contact-icon">✉</div>
+                            <span>Email Me</span>
+                        </a>
+                        <a href="https://instagram.com/harshank.s_art?igshid=1rtx6ukunugfr" target="_blank" class="contact-card"
+                            id="contact-instagram">
+                            <div class="contact-icon">📷</div>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="https://www.youtube.com/@HarshanksArt" target="_blank" class="contact-card"
+                            id="contact-youtube">
+                            <div class="contact-icon">▶</div>
+                            <span>YouTube</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/harshanklokhande/" target="_blank" class="contact-card"
+                            id="contact-linkedin">
+                            <div class="contact-icon">💼</div>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form id="contact-form" class="contact-form">
+                        <!-- Free Form Processor (Web3Forms/Formspree etc.) -->
+                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+
+                        <div class="form-group">
+                            <input type="text" name="name" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" id="message" rows="5" placeholder="Your Message"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit" id="submit-btn">Send Message</button>
+                        <p id="form-status" class="form-status"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer id="footer">
+        <p>&copy; 2026 Harshank Lokhande. All rights reserved.</p>
+        <a href="/admin.html" class="admin-link" title="Admin Panel">⚙</a>
+    </footer>
+
+    <!-- ===================== LIGHTBOX MODAL ===================== -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close" id="lightbox-close">&times;</button>
+        <div class="lightbox-content" id="lightbox-content"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
