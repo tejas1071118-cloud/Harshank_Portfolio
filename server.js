@@ -103,14 +103,23 @@ app.post('/api/login', (req, res) => {
     const { username, password } = req.body;
     if (username === ADMIN_USER && password === ADMIN_PASS) {
         const token = jwt.sign({ username: ADMIN_USER }, JWT_SECRET, { expiresIn: '2h' });
-        res.cookie('token', token, { httpOnly: true, maxAge: 2 * 60 * 60 * 1000 }); // 2 hours
+        res.cookie('token', token, { 
+            httpOnly: true, 
+            secure: true, 
+            sameSite: 'none', 
+            maxAge: 2 * 60 * 60 * 1000 
+        }); // 2 hours
         return res.json({ success: true, message: 'Logged in successfully' });
     }
     res.status(401).json({ success: false, error: 'Invalid username or password' });
 });
 
 app.post('/api/logout', (req, res) => {
-    res.clearCookie('token');
+    res.clearCookie('token', {
+        httpOnly: true,
+        secure: true,
+        sameSite: 'none'
+    });
     res.json({ success: true, message: 'Logged out successfully' });
 });
 

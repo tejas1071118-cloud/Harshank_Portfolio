@@ -157,6 +157,7 @@ function uploadWithProgress(formData, onProgress) {
         xhr.addEventListener('error', () => reject(new Error('Network error')));
         const API_URL = typeof CONFIG !== 'undefined' ? CONFIG.API_BASE_URL : '';
         xhr.open('POST', API_URL + '/api/upload');
+        xhr.withCredentials = true;
         xhr.send(formData);
     });
 }
@@ -249,7 +250,10 @@ async function deleteMedia(id) {
 
     try {
         const API_URL = typeof CONFIG !== 'undefined' ? CONFIG.API_BASE_URL : '';
-        const res = await fetch(API_URL + `/api/media/${id}`, { method: 'DELETE' });
+        const res = await fetch(API_URL + `/api/media/${id}`, { 
+            method: 'DELETE',
+            credentials: 'include'
+        });
         const result = await res.json();
         if (result.success) {
             showToast('🗑️ File deleted successfully.', 'success');
@@ -300,8 +304,10 @@ function initLogout() {
 
     btnLogout.addEventListener('click', async () => {
         try {
-            const API_URL = typeof CONFIG !== 'undefined' ? CONFIG.API_BASE_URL : '';
-            const res = await fetch(API_URL + '/api/logout', { method: 'POST' });
+            const res = await fetch(API_URL + '/api/logout', { 
+                method: 'POST',
+                credentials: 'include'
+            });
             if (res.ok) {
                 window.location.href = '/login.html';
             }
