@@ -328,6 +328,7 @@ function initLogout() {
 
     btnLogout.addEventListener('click', async () => {
         try {
+            const API_URL = typeof CONFIG !== 'undefined' ? CONFIG.API_BASE_URL : '';
             const res = await fetch(API_URL + '/api/logout', { 
                 method: 'POST',
                 credentials: 'include'
