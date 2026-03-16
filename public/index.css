@@ -433,6 +433,98 @@ img, video {
     100% { transform: translateY(-10px) rotate(1deg); }
 }
 
+/* ===================== THINGS I DO (SERVICES) ===================== */
+#services {
+    background: var(--bg-secondary);
+    position: relative;
+    padding: 120px 48px;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 40px auto 0;
+}
+
+.service-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    padding: 40px;
+    text-align: center;
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-magenta);
+    box-shadow: 0 20px 40px rgba(230, 46, 107, 0.1);
+}
+
+.service-icon {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transition: transform 0.4s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.service-card h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    background: linear-gradient(to right, #fff, var(--text-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.service-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    flex-grow: 1; /* Pushes button to bottom */
+}
+
+.btn-service {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 12px 32px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    color: var(--text-primary);
+    transition: all 0.3s;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.btn-service:hover {
+    background: var(--gradient-accent);
+    border-color: transparent;
+    box-shadow: 0 10px 20px rgba(230, 46, 107, 0.2);
+}
+
+.center-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
 /* ===================== PORTFOLIO SECTIONS ===================== */
 .portfolio-section {
     padding: 100px 48px;

@@ -120,10 +120,9 @@ async function loadAllSections() {
         const media = await res.json();
 
         const sections = {
-            'food-reels': { grid: document.getElementById('food-reels-grid'), items: [] },
             'photography': { grid: document.getElementById('photography-grid'), items: [] },
-            'youtube': { grid: document.getElementById('youtube-grid'), items: [] },
-            'other-work': { grid: document.getElementById('other-work-grid'), items: [] }
+            'video-editing': { grid: document.getElementById('video-editing-grid'), items: [] },
+            'fine-arts': { grid: document.getElementById('fine-arts-grid'), items: [] }
         };
 
         if (!media || media.length === 0) return; // leave placeholders
@@ -176,14 +175,13 @@ async function loadAllSections() {
 
         // Distribute items to grids
         media.forEach(item => {
-            if (item.category === 'food-reels') {
-                sections['food-reels'].items.push(item);
-            } else if (item.category === 'photography') {
+            if (item.category === 'photography') {
                 sections['photography'].items.push(item);
-            } else if (item.category === 'youtube') {
-                sections['youtube'].items.push(item);
+            } else if (item.category === 'food-reels' || item.category === 'youtube' || item.category === 'video-editing') {
+                sections['video-editing'].items.push(item);
             } else if (item.category !== 'hero-visual' && item.category !== 'featured-project') {
-                sections['other-work'].items.push(item);
+                // Treats 'other-work' and 'fine-arts' as fine arts
+                sections['fine-arts'].items.push(item);
             }
         });
 
