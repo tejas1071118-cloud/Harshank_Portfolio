@@ -238,7 +238,7 @@ async function loadLibrary() {
             const sizeStr = formatSize(item.size);
 
             return `
-                <div class="media-card" data-id="${item.id}">
+                <div class="media-card" data-id="${item._id}">
                     <div class="media-thumb">
                         ${item.type === 'video'
                             ? `<video src="${item.path}" muted preload="metadata"></video>`
@@ -250,7 +250,7 @@ async function loadLibrary() {
                         <div class="media-title">${escapeHtml(item.title)}</div>
                         <div class="media-meta">
                             <span>${formatCategory(item.category)} · ${sizeStr}</span>
-                            <button class="btn-delete" onclick="deleteMedia('${item.id}')">Delete</button>
+                            <button class="btn-delete" onclick="deleteMedia('${item._id}')">Delete</button>
                         </div>
                     </div>
                 </div>
