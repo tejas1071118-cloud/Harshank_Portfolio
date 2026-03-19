@@ -146,7 +146,7 @@ async function loadAllSections() {
             const watchBtn = document.getElementById('watch-project-btn');
             watchBtn.onclick = (e) => {
                 e.preventDefault();
-                openLightbox(featuredProject);
+                openLightbox(featuredProject.path, featuredProject.type);
             };
             
             // Render video element or image poster
@@ -164,7 +164,7 @@ async function loadAllSections() {
                 } else {
                     frame.innerHTML = `<img src="${featuredProject.path}" style="width: 100%; height: 100%; object-fit: cover; cursor: pointer;">`;
                 }
-                frame.onclick = () => openLightbox(featuredProject);
+                frame.onclick = () => openLightbox(featuredProject.path, featuredProject.type);
             }
             
             const textSection = document.querySelector('#featured-projects .featured-text');
